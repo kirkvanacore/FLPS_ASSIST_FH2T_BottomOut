@@ -223,7 +223,7 @@ def head(file, endIndex = 100):
             break
 
 def testLoad(file):
-    data =  genfromtxt(file,delimiter=",",encoding='utf-8',dtype=None)
+    data =  genfromtxt(file,delimiter=",",encoding='utf-8',dtype=None,names=True)
     #data = pd.read_csv(file)
     print(data)
 
