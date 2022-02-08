@@ -26,14 +26,13 @@ def checkUniqueDescriptive(col,df):
 
 def filter(valueCount):
     if valueCount is None:
-        return ""
+        return "0"
     else:
         return valueCount
 
 def binaryListDescriptive(col,df):
     valueCounts = df[col].value_counts()
-    print(valueCounts.keys())
-    return (df[col].notnull().sum(),"","","","","","","","",valueCounts.get(float(1.0)))
+    return (df[col].notnull().sum(),"","","","","","","","",filter(valueCounts.get(float(1.0))))
 
 def generalDescriptive(col,df):
     return (df[col].notnull().sum(),"","","","","","","","","")
